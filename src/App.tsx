@@ -66,11 +66,11 @@ function searchIfAnItemInArrayIncludesInAnother(array: string[], array2: string[
 export default function App() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [list] = React.useState<List[]>(data as List[]);
-  const [filters, setFilters] = React.useState(["React", "Frontend", "JavaScript"]);
+  const [filters, setFilters] = React.useState<string[]>([]);
 
   return (
     <main>
-      <div className="flex flex-col gap-12 items-center justify-center">
+      <div className="mx-auto w-[375px] xl:w-[1440px] flex flex-col gap-12 items-center justify-center">
         <div className="w-[375px] h-[156px] xl:w-[1440px] xl:h-[156px]">
           <picture>
             <source srcSet={bgHeaderDesktop} media="(min-width: 1440px)"></source>
@@ -78,7 +78,7 @@ export default function App() {
           </picture>
         </div>
 
-        <div className="container w-[375px] xl:w-[1440px] flex flex-col gap-12 xl:gap-8">
+        <div className="container w-[90%] flex flex-col gap-12 xl:gap-8">
           {filters.length > 0 && (
             <section className="-mt-20 flex justify-between gap-8 bg-white px-8 py-4 rounded-md shadow-xl shadow-neutral-darkest-grayish-cyan/20">
               <h2 className="sr-only">List of filters</h2>
