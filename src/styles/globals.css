@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+    :root {
+        --clr-primary-dark-cyan: 180 29% 50%;
+
+        --clr-neutral-light-grayish-cyan-background: 180 52% 96%;
+        --clr-neutral-light-grayish-cyan-filter-tablets: 180 31% 95%;
+        --clr-neutral-dark-grayish-cyan: 180 8% 52%;
+        --clr-neutral-darkest-grayish-cyan: 180 14% 20%;
+
+        --mobile-size: 375px;
+        --desktop-size: 1440px;
+
+        --base-font-size: 15px;
+
+        --font-family: "League Spartan", system-ui, sans-serif;
+    }
+}
+
+@layer base {
+    html,
+    body {
+        font-size: var(--base-font-size);
+        font-weight: 500;
+    }
+
+    body {
+        @apply font-league bg-neutral-light-grayish-cyan-background text-neutral-dark-grayish-cyan;
+    }
+
+    img {
+        @apply w-full max-w-full h-full max-h-full object-cover;
+    }
+}
